@@ -1,0 +1,45 @@
+/* Global style */
+h1, h2, h3, h4, h5, h6 { text-align: right;}
+
+.show-pass {
+  left: 28px;
+  right: auto;
+}
+
+.form-content {
+  direction: rtl;
+  text-align: right;
+}
+
+.dropdown, .trick_r { text-align: right; }
+
+.sidebar-nav li a {
+  padding-right: 19px;
+}
+
+.lang-nav img {
+  margin: 0 7px;
+}
+
+.categories, .container-fluid { direction: rtl !important; }
+
+.form-content .form-group { text-align: right; }
+
+.container-special { direction: rtl; }
+/* end global style */
+/* start dashboard */
+.page-heading, .first-block .panel-card .panel-heading, .info_acc a, .alert {
+  text-align: right;
+}
+
+.first-block .panel-card .panel-heading i {
+  float: right;
+  padding: 5px;
+}
+
+.first-block .panel-card .panel-heading span { float: left; }
+
+.first-block .panel-card {
+  direction: rtl;
+}
+/* End dashboard */

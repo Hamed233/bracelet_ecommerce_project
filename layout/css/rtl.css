@@ -1,0 +1,371 @@
+/* Global */
+
+body,
+html {
+    direction: rtl;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: right;
+}
+
+.single-welcome-slides .welcome-content {
+    text-align: right;
+}
+
+.header-area .famie-main-menu .classy-navbar .classynav ul li a {
+    text-align: right !important;
+}
+
+input[type=tel],
+input[type=url],
+input[type=password],
+input[type=text],
+input[type=email],
+input[type=reset],
+input[type=button],
+input[type=submit],
+button,
+textarea {
+    text-align: right;
+}
+
+.breakpoint-on .classynav ul li.megamenu-item>a::after,
+.breakpoint-on .classynav ul li.has-down>a::after {
+    right: 256px !important;
+}
+
+
+/* Login Page */
+
+.label-input100 {
+    text-align: right;
+}
+
+.block_bottom .forget-pass {
+    float: left;
+    text-align: left;
+}
+
+.block_bottom .contact100-form-checkbox {
+    text-align: right;
+    float: right;
+}
+
+.check-rtl {
+    display: none !important;
+}
+
+.login_content {
+    text-align: right;
+}
+
+.login_content .form-content .login_log {
+    text-align: left;
+}
+
+.valid::before,
+.invalid:before {
+    left: 17px;
+}
+
+#message p {
+    text-align: right !important;
+}
+
+.see-also {
+    text-align: right;
+    display: block !important;
+}
+
+.login100-form-title {
+    letter-spacing: 1px;
+}
+
+.see_all {
+    display: none;
+}
+
+
+/* Index page */
+
+.cats-also-content h3,
+.single-benefits-area h5 {
+    text-align: center;
+}
+
+.img-content p:first-child,
+.img-content p:nth-child(2) {
+    letter-spacing: 2px;
+}
+
+
+/* Navbar */
+
+.search-form {
+    left: 0;
+    right: auto;
+    text-align: right;
+}
+
+.search-form .closeIcon {
+    left: 15px;
+    right: auto;
+}
+
+.lang-nav a {
+    text-align: right;
+}
+
+.lang-nav span {
+    font-size: 20px;
+    line-height: 2;
+}
+
+
+/* Categories */
+
+.list-group {
+    text-align: right;
+}
+
+
+/* Products */
+
+.product .image {
+    margin: 0;
+    margin-top: 14px !important;
+}
+
+.directions {
+    text-align: center;
+}
+
+.tab,
+.product p,
+.storyInfo .subtitle,
+.storyInfo .list,
+.productPromoBoxText {
+    text-align: right;
+}
+
+.part-one,
+.part-two,
+.part-four {
+    text-align: center;
+}
+
+.part-three {
+    direction: ltr;
+}
+
+.form-check .text {
+    padding-right: 7px;
+    font-size: 18px;
+}
+
+.save-product-num-2 {
+    text-align: right;
+}
+
+.storyInfo .list li {
+    text-align: right !important;
+    margin-left: 0;
+    margin-right: 30px;
+}
+
+.productPromoBoxIcon {
+    float: right;
+}
+
+
+/* Start Cart */
+
+.my-container {
+    direction: rtl;
+}
+
+.my-container>h1,
+.my-container>h2 {
+    direction: rtl;
+    text-align: right;
+}
+
+.items .header,
+.items .header>.item {
+    direction: rtl;
+}
+
+.items .ln>.item,
+.resume>.row.total:first-child,
+.resume>.row.total {
+    text-align: right;
+}
+
+.clean-cart {
+    float: right;
+}
+
+.lang-nav a {
+    text-align: left;
+}
+
+.resume>.row.total {
+    float: left;
+}
+
+.resume>.row>label {
+    min-width: 100%;
+    margin-left: 214px;
+}
+
+.items .header>.item {
+    text-align: right;
+}
+
+.totals .totals-item {
+    float: left;
+}
+
+.totals .totals-item label {
+    float: right;
+    text-align: left;
+}
+
+.totals .totals-item .totals-value {
+    float: left;
+    text-align: left;
+}
+
+.btn-sub {
+    text-align: left;
+}
+
+.btn-sub button::after {
+    content: '\f060';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 800;
+    margin-right: 6px;
+    font-size: 18px;
+}
+
+.quantity p {
+    text-align: center !important;
+}
+
+
+/* End Cart */
+
+
+/* Start Orders */
+
+.order-navbar .nav-b {
+    float: right;
+}
+
+.order-navbar .section-header {
+    float: left;
+}
+
+.order-navbar .safe-pay span::before,
+.order-navbar .return-easy span::before {
+    left: auto;
+    right: -30px;
+    padding-right: 0;
+}
+
+.product-or-content .product-or-name,
+.product-or-content .product-or-price,
+.order-content .data-client label,
+.sec-con-1,
+.order-content .way-3,
+.order-content .sec-con-1 p,
+.order-content .sec-con-2 p {
+    text-align: right;
+}
+
+.mon-info p {
+    float: right;
+}
+
+.mon-info span {
+    float: left;
+}
+
+.order-content .sec-con-1 input[type="radio"],
+.order-content .sec-con-2 input[type="radio"],
+.order-content .sec-con-3 input[type="radio"],
+.order-content .way-3 input {
+    right: 23px;
+    left: auto;
+}
+
+.order-content .sec-con-1 p,
+.order-content .sec-con-2 p {
+    margin-right: 46px;
+    margin-left: 0;
+    text-align: right;
+}
+
+.order-content .sec-con-1 .alert-secondary,
+.order-content .sec-con-2 .alert-secondary {
+    margin-right: 31px;
+    margin-left: 0;
+    text-align: right;
+}
+
+.some-notes ul {
+    margin-right: 42px;
+    margin-left: 0;
+    text-align: right;
+}
+
+.order-content .way-3 img {
+    margin-left: 0;
+    margin-right: 54px;
+}
+
+.padd-trick {
+    padding-right: 10px !important;
+    padding-left: 0;
+}
+
+.cartStepNavigation .backStep span:before {
+    content: "\f054";
+}
+
+.cartStepNavigation .nextStep span:after {
+    content: "\f053";
+}
+
+
+/* End Orders */
+
+
+/* Start Footer */
+
+#footer ul {
+    text-align: right;
+}
+
+#footer .contact {
+    text-align: right;
+}
+
+#footer .contact i {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+#footer .social li i {
+    margin-left: 10px;
+    margin-right: 0;
+    font-size: 34px;
+    display: inline-block;
+    letter-spacing: 3px;
+}

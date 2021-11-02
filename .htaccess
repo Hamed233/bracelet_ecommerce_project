@@ -1,0 +1,43 @@
+#
+# 1) Make URLs SEO Friendly and Future Proof
+#
+
+<Files magic>
+	ForceType application/x-httpd-php5
+</Files>
+
+#
+# 2) Robots Directives
+#
+
+Header set X-Robots-Tag "noindex, noarchive, nosnippet"
+
+
+#
+# 3) Various Types of Redirect
+#
+
+# Ensure we are using HTTPS version of the site.
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+#
+# 4) Custom 404 Error Page
+#
+
+ErrorDocument 404 /404.php
+
+#
+# 5) Send the Vary Header to Help Crawl Mobile Content
+#
+
+Header append Vary: User-Agent
+
+
+#
+# 6) Improve Caching for Better Site Speed
+#
+
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf|js|css|pdf)$">
+	Header set Cache-Control "max-age=28800"
+</FilesMatch>
