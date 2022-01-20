@@ -362,7 +362,7 @@
          '' => '',
          'Product Price' => 'Product Price',
          'checkout' => 'Checkout',
-         'My Favorite products' => 'My Favorite products',
+         'My Favorite products' => 'Favorite Products',
          'Shipping Details' => 'Shipping Details',
          'Delivery' => 'Delivery',
          'Delivery information' => 'Delivery information',

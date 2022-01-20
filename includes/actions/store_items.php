@@ -156,7 +156,7 @@ if (isset($_POST['mycart'])) {
       <div class="ln product for_desktop">
           <div class="image ft-product-image">
             <a href="product.php?p_id=<?php echo $value['p_id'] . '&productname=' . preg_replace('/\s/', '%', $value['p_name']) . '&action=getproductinformation'; ?>" target="_blank">
-              <img class="lazy image -loaded" width="60" height="60" src="<?php echo $value['p_img']; ?>" value="<?php echo $value['p_img']; ?>" alt="product img">
+              <img class="lazy -loaded" width="60" height="60" src="<?php echo $value['p_img']; ?>" value="<?php echo $value['p_img']; ?>" alt="product img">
             </a>
             <input name="image" type="hidden" value="<?php echo $value['p_img']; ?>">
           </div>

@@ -2,6 +2,13 @@
 // ********** Js ************* //
 // ******************************************* //
 
+// Toggle Search Categories
+$(".link-control").click(function () {
+    if($('.wrap-search-form .wrap-list-cate').length > 0){
+        $(".list-cate").slideToggle();
+    }
+});
+
 $('#agreeing').click(function() {
     if ($('#agreeing:checked').length > 0) {
         $('.nextStep_disabled').removeAttr('disabled');

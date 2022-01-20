@@ -622,7 +622,7 @@ if ($do == 'not-allowd') {
                     <h4>
                         <?php
                 $cou_cart = countItems("p_c_id", "store_cart_item", "WHERE customer_id = {$cus_id}");
-                echo $lang['Summary your request'] . ' (<span class="red"> ' . $cou_cart . ' </span>' . $lang['Products'] . ' )';
+                echo $lang['Summary your request'] . ' (<span class="brown"> ' . $cou_cart . ' </span>' . $lang['Products'] . ' )';
                 ?>
                     </h4>
                 </div>
@@ -648,7 +648,7 @@ if ($do == 'not-allowd') {
                                 <?php echo ($product['p_price'] - $product['discount'])  . 'Kwt'; ?>
                             </div>
                             <div class="product-or-price d-inline-block float-right">
-                             <?php echo '<span class="red">' . $product['p_quantity'] . ' </span>' . $lang['pieces']; ?>
+                             <?php echo '<span class="brown">' . $product['p_quantity'] . ' </span>' . $lang['pieces']; ?>
                             </div>
                         </div>
                         <div class="col-12">
@@ -919,7 +919,7 @@ if ($do == 'not-allowd') {
                   foreach($orders as $order) {
 
                     echo "<tr>";
-                      echo "<td><a class='red' href='order.php?do=order_content&ordernum=" . $order['ord_number'] . "' target='_blank'>" . $order['ord_number'] . "</a></td>";
+                      echo "<td><a class='brown' href='order.php?do=order_content&ordernum=" . $order['ord_number'] . "' target='_blank'>" . $order['ord_number'] . "</a></td>";
                       echo "<td>" . $order['f_name'] . ' ' . $order['s_name'] . "</td>";
                       echo "<td>" . $order['payment_type']         . "</td>";
                       echo "<td>+" . $order['country_key'] . ' ' . $order['cus_phone_number'] . "</td>";
@@ -1081,7 +1081,7 @@ if ($do == 'not-allowd') {
 
 <div class="container-fluid">
     <h2 class="order_num_head text-center">
-        <?php echo $lang['all infrmation about'] . '<span class="red"> ' . $_GET['ordernum'] . ' </span>' . $lang['order number']; ?>
+        <?php echo $lang['all infrmation about'] . '<span class="brown"> ' . $_GET['ordernum'] . ' </span>' . $lang['order number']; ?>
     </h2>
     <div class="table-responsive">
         <table class="main-table text-center table table-bordered">
@@ -1101,7 +1101,7 @@ if ($do == 'not-allowd') {
             foreach($products as $product) {
 
               echo "<tr>";
-                echo "<td><a class='red' href='product.php?p_id=" . $product['productID'] . '&productname=' . preg_replace('/\s+|%/', ' ', $product['p_name']) . '&action=getproductinformation' . "'>" . $product['p_name']   . "</a></td>";
+                echo "<td><a class='brown' href='product.php?p_id=" . $product['productID'] . '&productname=' . preg_replace('/\s+|%/', ' ', $product['p_name']) . '&action=getproductinformation' . "'>" . $product['p_name']   . "</a></td>";
                 echo "<td>" . $product['ord_quantity'] . "</td>";
                 echo "<td>" . $product['size'] . "</td>";
                 echo "<td>" . $product['product_color'] . "</td>";

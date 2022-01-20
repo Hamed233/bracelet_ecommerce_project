@@ -271,8 +271,8 @@ function addLove(pid, cusid) {
                 $('.cap_status').addClass('alert alert-danger').html("Deleted from Fav <i class=\"fas fa-check-circle\"></i>").fadeIn('slow').delay(2000).fadeOut('slow');
                 $("#" + getNumbers(result) + "_love").removeClass("fas").addClass("far").attr('data-icon', 'far').css("color", "#000");
             } else {
-                $('.cap_status').addClass('alert alert-primary').html("Added to Fav <i class=\"fas fa-check-circle\"></i>").fadeIn('slow').delay(2000).fadeOut('slow');
-                $("#" + result + "_love").removeClass("far").addClass("fas").attr('data-icon', 'fas').css("color", "#f00");
+                $('.cap_status').addClass('alert alert-primary').html("<i class=\"fas fa-check-circle\"></i> Added to Fav").fadeIn('slow').delay(2000).fadeOut('slow');
+                $("#" + result + "_love").removeClass("far").addClass("fas").attr('data-icon', 'fas').css("color", "rgb(250, 106, 11)");
             }
         }
     });

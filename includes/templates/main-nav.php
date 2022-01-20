@@ -1,3 +1,5 @@
+<?php $sessionCus = isset($_SESSION['cus_id']) ? $_SESSION['cus_id'] : $sessionCustomer_not_login; ?>
+
 <!-- ##### Header Area Start ##### -->
      <header class="header-area">
        <!-- Top Header Area -->
@@ -8,7 +10,7 @@
                <div class="top-header-content d-flex align-items-center justify-content-between">
                  <!-- Top Header Content -->
                  <div class="top-header-meta">
-                   <p class="text-center"><?php echo $lang['Hello in our store']; ?><span> <a href="https://www.zlkwt.com/">Zlkwt</a> </span><?php echo $lang['For Good Bracelets, Nice Shopping!']; ?></p>
+                   <p class="text-center"><?php echo $lang['Hello in our store']; ?><span> <strong><a href="https://www.zlkwt.com/">Zlkwt</a></strong> </span><?php echo $lang['For Good Bracelets, Nice Shopping!']; ?></p>
                  </div>
                </div>
              </div>
@@ -16,31 +18,107 @@
          </div>
        </div>
 
+       <div class="container" >
+        <div class="mid-section main-info-area">
+            <div class="wrap-logo-top left-section">
+              <a href="index.html" class="link-to-home"><img src="<?php echo $img; ?>logo_d.png" alt="logo website" style="width: 118px;"></a>
+            </div>
+
+
+            <div class="wrap-search center-section">
+              <div class="wrap-search-form">
+                  <form action="result_search.php" method="get" id="form-search-top" name="form-search-top">
+                      <input type="text" name="s" value="" placeholder="Search here...">
+                      <button form="form-search-top" type="submit"><i class="fas fa-search" aria-hidden="true"></i></button>
+                      <div class="wrap-list-cate">
+                          <input type="hidden" name="product_cat" value="All Category" id="product-cate">
+                          <input type="hidden" name="product_cat_id" value="" id="product-cate-id">
+
+                          <a href="#" class="link-control">All Category</a>
+                          <ul class="list-cate" style="display: none;">
+                              <li class="level-0">All Category</li>
+                              <li class="level-1" data-id="208">enim est</li>
+                              <li class="level-1" data-id="210">deleniti et</li>
+                              <li class="level-1" data-id="211">vitae est</li>
+                              <li class="level-1" data-id="212">dolor voluptatem</li>
+                              <li class="level-1" data-id="214">facere qui</li>
+                              <li class="level-1" data-id="215">consequatur amet</li>
+                              <li class="level-1" data-id="216">ab deserunt</li>
+                              <li class="level-1" data-id="217">id voluptatem</li>
+                          </ul>
+                      </div>
+                  </form>
+              </div>
+          </div>
+
+          <div class="wrap-icon right-section">
+              <div class="wrap-icon-section wishlist">
+                  <div id="favIcon">
+                    <a class="favIcon link-direction" href="favproduct.php">
+                      <i class="fas fa-heart " aria-hidden="true"></i>
+                      <?php 
+                      if($sessionCus) {
+                        $cou_fav = countItems("p_fav", "favorite_products", "WHERE userid = {$sessionCus}");
+                        echo '<span id="span_count" class="fav_count">' . $cou_fav . '</span>';
+                      }
+                      
+                      ?>
+                      <div class="left-info">
+                        <span class="title">Favourites</span>
+                      </div>
+                    </a>
+                  </div>
+            </div>
+            <div class="wrap-icon-section minicart">
+                <a href="cart.php" class="link-direction">
+                    <i class="fas fa-shopping-basket" aria-hidden="true"></i>
+                    <span id="cart-quantity" class="cart-quantity">
+                       <?php 
+                       if (isset($_SESSION['cart']) && isset($sessionCus)){
+                         $cou_cart = countItems("p_c_id", "store_cart_item", "WHERE customer_id = {$sessionCus}");
+                         echo $cou_cart;
+                        } else {
+                          echo "0";
+                        } ?>
+                    </span>
+                    <div class="left-info">
+                      <span class="title">CART</span>
+                    </div>
+                </a>
+              </div>
+          </div>
+         </div>
+        </div>
+
        <!-- Navbar Area -->
        <div class="famie-main-menu">
          <div class="classy-nav-container breakpoint-off">
-           <div class="container-fluid">
                  <!-- Menu -->
                  <nav class="classy-navbar justify-content-between" id="famieNav">
-                   <!-- Nav Brand -->
-                   <a href="index.php" class="nav-brand"><img src="<?php echo $img; ?>logo_d.png" alt="Logo"></a>
+                  <div class="container-fluid">
+                  <!-- Nav Brand -->
+                   <a href="index.php" class="nav-brand"><img src="<?php echo $img; ?>logo_d.png" alt="logo website"></a>
 
                      <!-- Navbar Toggler -->
                    <div class="classy-navbar-toggler">
                      <span class="navbarToggler"><span></span><span></span><span></span></span>
                    </div>
-
+                  
+                     <!-- Navbar Start -->
                    <!-- Menu -->
                    <div class="classy-menu">
                      <!-- Close Button -->
                      <div class="classycloseIcon">
                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                      </div>
-                     <!-- Navbar Start -->
+                      
                      <div class="classynav">
-                       <ul>
+                       <ul class="left-navbar-section">
                          <li>
                            <a class="home-link active" href="index.php"><?php echo $lang['Home']; ?></a>
+                         </li>
+                         <li>
+                           <a class="order-link active" href="order.php?do=my_orders&customerid=<?php echo $sessionCus; ?>"><?php echo $lang['My orders']; ?></a>
                          </li>
                          <li>
                            <li>
@@ -62,10 +140,7 @@
 
                            </li>
                          <li>
-                           <?php $sessionCus = isset($_SESSION['cus_id']) ? $_SESSION['cus_id'] : $sessionCustomer_not_login; ?>
-                         <li>
-                           <a class="order-link active" href="order.php?do=my_orders&customerid=<?php echo $sessionCus; ?>"><?php echo $lang['My orders']; ?></a>
-                         </li>
+
                           <li class="lang-nav">
                                 <?php
                                 if (isset($_GET['lang'])) {
@@ -85,63 +160,25 @@
                               </ul>
                           </li>
                         </li>
-
-                         <?php if (!isset($_SESSION['customer'])) { ?>
-                             <li> <a class="login-link" href="login.php"><?php echo $lang['Signin'] . ' / ' . $lang['SignUp']; ?></a></li>
+                   </ul>
+                   <div class="right-navbar-section">
+                <div>
+                   <?php if (!isset($_SESSION['customer'])) { ?>
+                          <button class="btn btn-brown signup-btn"><a class="" href="login.php?do=SignUp"><?php echo $lang['SignUp']; ?></a></button>
+                          <button class="btn btn-light login-btn"><a class="" href="login.php"><?php echo $lang['Signin']; ?></a></button>
                        <?php  } else { ?>
-                         <li>
+                         
                            <a href="#"><?php echo $_SESSION['customer']; ?></a>
                            <ul class="dropdown">
                               <li> <a href="logout.php"><?php echo $lang['logout']; ?></a></li>
                            </ul>
-                         </li>
-                      <?php  } ?>
-                   </ul>
-
-                   <!-- Search Icon -->
-                   <div id="searchIcon">
-                     <i class="fas fa-search"></i>
+                         
+                        <?php  } ?>
+                      </div>
                    </div>
-
-                   <!-- Search Form -->
-                  <div class="search-form">
-                    <form action="result_search.php" method="get">
-                      <input type="search" name="s" id="search" placeholder="<?php echo $lang['What you need...']; ?>">
-                      <button type="submit" class="d-none"></button>
-                    </form>
-                    <!-- Close Icon -->
-                    <div class="closeIcon"><i class="fas fa-times" aria-hidden="true"></i></div>
-                  </div>
-
-
-                   <!-- Cart Icon -->
-                   <div id="cartIcon">
-                     <a href="cart.php">
-                       <i class="fas fa-shopping-cart"></i>
-                       <span id="cart-quantity" class="cart-quantity">
-                       <?php 
-                       $sessionCus = isset($_SESSION['cus_id']) ? $_SESSION['cus_id'] : $_SESSION['customer_id'];
-                       if (isset($_SESSION['cart']) && isset($sessionCus)){
-                         $cou_cart = countItems("p_c_id", "store_cart_item", "WHERE customer_id = {$sessionCus}");
-                         echo $cou_cart;
-                        } else {
-                          echo "0";
-                        } ?>
-                        </span>
-                     </a>
-                   </div>
-                   <!-- Favorite products -->
-                   <div id="favIcon">
-                    <a class="favIcon" href="favproduct.php">
-                      <i class="fas fa-heart fav_icon"></i>
-                      <?php 
-                        $cou_fav = countItems("p_fav", "favorite_products", "WHERE userid = {$sessionCus}");
-                        echo '<span id="span_count" class="fav_count">' . $cou_cart . '</span>';
-                      ?>
-                    </a>
-                  </div>
                  </div>
                  <!-- Navbar End -->
+                 </div>
                </div>
              </nav>
     
@@ -157,23 +194,10 @@
                   ?>
                </div>
             <?php } ?>
-            </div>
         </div>
-      </div>
+      
 
-       <?php if (!isset($cats_nav)){ ?>
-       <div class="navbar-cats">
-         <ul>
-        <?php
-          $cats = getAllFrom("*", "categories", "WHERE active = 0", "AND parent < '1'", "", "c_id");
-          if(!empty($cats)) {
-            foreach($cats as $cat) { ?>
-              <li><a href="categories.php?catname=<?php echo preg_replace('/\s+|&/', '%', $cat['c_name']) . '&catid=' . $cat['c_id'] . '&action=getcategoryinfo'; ?>"><?php echo $cat['c_name']; ?></a></li>           
-         <?php }
-         } ?>
-         </ul>
-       </div>
-    <?php } ?>
+      </div>
              <!-- login -->
      </header>
      <!-- ##### Header Area End ##### -->

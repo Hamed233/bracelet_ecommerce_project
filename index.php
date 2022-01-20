@@ -164,14 +164,12 @@
        </div>
       </div>
 
-      <hr />
-
       <h2 class="latest-head home-h2"><?php echo $lang['Latest products']; ?></h2>
       <div class="row">
         <?php
         $latestProducts = getAllFrom("*", "products", "WHERE product_status = '1'", "", "p_id", "DESC", "limit 8");
         foreach ($latestProducts as $product) { ?>
-          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 phone_50">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 phone_50">
             <div class="product-content">
               <i id="<?php echo $product['p_id']; ?>_love" class="far fa-heart fa-fw" onclick="addLove(<?php echo $product['p_id']; ?>, <?php echo $sessionCus; ?>)" aria-hidden="true" data-icon="far" data-productid="<?php echo $product['p_id']; ?>"></i>
               <div class="product-img">
@@ -206,12 +204,11 @@
         if (!empty($boysProducts)) { ?>
 
           <div class="clearfix"></div>
-          <hr />
           <h2 class="latest-head home-h2"><?php echo $lang['bracelets For Boys']; ?></h2>
           <div class="row">
 
     <?php foreach ($boysProducts as $product) { ?>
-          <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 phone_50">
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 phone_50">
             <div class="product-content">
             <i id="<?php echo $product['p_id']; ?>_love" class="far fa-heart fa-fw" onclick="addLove(<?php echo $product['p_id']; ?>, <?php echo $sessionCus; ?>)" aria-hidden="true" data-icon="far" data-productid="<?php echo $product['p_id']; ?>"></i>
               <div class="product-img">
@@ -244,14 +241,13 @@
       <?php
         $braceletGirl = getAllFrom("*", "products", "WHERE product_status = '1'", "AND categoryID = '5'", "", "p_id", "limit 8");
         if (!empty($braceletGirl)) { ?>
-          <hr />
 
           <h2 class="latest-head home-h2"><?php echo $lang['bracelets For Girl']; ?></h2>
           <div class="row">
             <?php
 
             foreach ($braceletGirl as $product) { ?>
-              <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 phone_50">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 phone_50">
                 <div class="product-content">
                  <i id="<?php echo $product['p_id']; ?>_love" class="far fa-heart fa-fw" onclick="addLove(<?php echo $product['p_id']; ?>, <?php echo $sessionCus; ?>)" aria-hidden="true" data-icon="far" data-productid="<?php echo $product['p_id']; ?>"></i>
                   <div class="product-img">
@@ -284,14 +280,13 @@
         <?php
           $braceletWomen = getAllFrom("*", "products", "WHERE product_status = '1'", "AND categoryID = '4'", "", "p_id", "limit 8");
           if (!empty($braceletWomen)) { ?>
-            <hr />
 
             <h2 class="latest-head home-h2"><?php echo $lang['bracelets For Women']; ?></h2>
             <div class="row">
               <?php
 
               foreach ($braceletWomen as $product) { ?>
-                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 phone_50">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 phone_50">
                   <div class="product-content">
                     <i id="<?php echo $product['p_id']; ?>_love" class="far fa-heart fa-fw" onclick="addLove(<?php echo $product['p_id']; ?>, <?php echo $sessionCus; ?>)" aria-hidden="true" data-icon="far" data-productid="<?php echo $product['p_id']; ?>"></i>
                     <div class="product-img">
@@ -324,14 +319,13 @@
           <?php
             $braceletMen = getAllFrom("*", "products", "WHERE product_status = '1'", "AND categoryID = '3'", "", "p_id", "limit 8");
             if (!empty($braceletMen)) { ?>
-              <hr />
 
               <h2 class="latest-head home-h2"><?php echo $lang['bracelets For Men']; ?></h2>
               <div class="row">
                 <?php
 
                 foreach ($braceletMen as $product) { ?>
-                  <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 phone_50">
+                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 phone_50">
                     <div class="product-content">
                       <i id="<?php echo $product['p_id']; ?>_love" class="far fa-heart fa-fw" onclick="addLove(<?php echo $product['p_id']; ?>, <?php echo $sessionCus; ?>)" aria-hidden="true" data-icon="far" data-productid="<?php echo $product['p_id']; ?>"></i>
                       <div class="product-img">
@@ -364,14 +358,13 @@
             <?php
               $braceletNecklaces = getAllFrom("*", "products", "WHERE product_status = '1'", "AND categoryID = '7'", "", "p_id", "limit 8");
               if (!empty($braceletNecklaces)) { ?>
-                <hr />
 
                 <h2 class="latest-head home-h2"><?php echo $lang['Custom Necklaces']; ?></h2>
                 <div class="row">
                   <?php
 
                   foreach ($braceletNecklaces as $product) { ?>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 phone_50">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 phone_50">
                       <div class="product-content">
                         <i id="<?php echo $product['p_id']; ?>_love" class="far fa-heart fa-fw" onclick="addLove(<?php echo $product['p_id']; ?>, <?php echo $sessionCus; ?>)" aria-hidden="true" data-icon="far" data-productid="<?php echo $product['p_id']; ?>"></i>
                         <div class="product-img">
@@ -419,7 +412,7 @@
                   <?php
 
                   foreach ($otherProducts as $product) { ?>
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 phone_50">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 phone_50">
                       <div class="product-content">
                         <i id="<?php echo $product['p_id']; ?>_love" class="far fa-heart fa-fw" onclick="addLove(<?php echo $product['p_id']; ?>, <?php echo $sessionCus; ?>)" aria-hidden="true" data-icon="far" data-productid="<?php echo $product['p_id']; ?>"></i>
                         <div class="product-img">
@@ -455,7 +448,7 @@
               <div class="full-width-img-second design_banner"></div>
 
 
-            <div class="container-fluid">
+            <div class="container">
 
               <h2 class="see-also home-h2 d-inline"><a href="categories.php"><?php echo $lang['See Also!']; ?></a></span></h2>
               <div class="cats-also-content">
@@ -464,7 +457,7 @@
                     $cats = getAllFrom("*", "categories", "WHERE active = 0", "", "", "c_id", "limit 12");
                      if (!empty($cats)) {
                        foreach($cats as $cat) { ?>
-                        <div class="col-xs-12 col-sm-6 col-md-2 col-lg-2 phone_50">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 phone_50">
                            <div class="cat-content text-center">
                              <a href="categories.php" target="_blank">
                               <div class="cat-img">

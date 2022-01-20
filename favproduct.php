@@ -10,8 +10,8 @@
   include "init.php";         // initialize file
 ?>
 
-<div class="bradcam_bg_2 fav_img">
-    <h2 class="text-center fav_head"><?php echo $lang['My Favorite products']; ?>..<i class="fas fa-heart"></i></h2>
+<div class="bradcam_bg_2 fav_header">
+    <h1 class="text-center"><?php echo $lang['My Favorite products']; ?>..<i class="fas fa-heart"></i></h1>
 </div>
 <div class="container text-center fav_content">
     <div class="text-center">
@@ -69,7 +69,7 @@
                   <?php echo $lang['Not found any favorite products, You can browse product and add now!']; ?>
                 </div>
                 <div class="button-block">
-                <a href="index.php" class=" btn btn-primary"><?php echo $lang['Browse Now']; ?></a>
+                <a href="index.php" class=" btn btn-brown"><?php echo $lang['Browse Now']; ?></a>
                 </div>
             </div>
             </div>

@@ -80,6 +80,10 @@
    <div class="limiter form-log">
  		<div class="container-login100">
  			<div class="wrap-login100">
+        <div class="text-center">
+          <img src="layout/images/logo_d.png" alt="logo website" style="width: 183px;">
+        </div>
+        <h1 class="login100-form-title p-b-43">SignIn</h1>
  				<form class="login100-form" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
           <?php
 
@@ -88,11 +92,6 @@
                 unset($_SESSION["success"]);
             }
            ?>
-
-          <span class="login100-form-title p-b-43">
- 					Signin
- 					</span>
-
 
  					<div class="wrap-input100 validate-input">
  						<input class="input100" type="email" name="email" value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>" required>
@@ -125,7 +124,7 @@
 
  					<div class="container-login100-form-btn">
  						<button type="submit" class="login100-form-btn" name="Signin">
- 							Signin
+ 							SignIn
  						</button>
  					</div>
 
@@ -144,9 +143,6 @@
               ?>
           </div>
  				</form>
-
- 			  	<div class="login100-more" style="background-image: url('<?php echo $img; ?>bg-01.jpg');">
- 				</div>
  			</div>
  		</div>
  	</div>
@@ -301,11 +297,12 @@
   <div class="limiter form-log">
    <div class="container-login100">
      <div class="wrap-login100">
+       <div class="text-center">
+          <img src="layout/images/logo_d.png" alt="logo website" style="width: 183px;">
+       </div>
+          
+       <h1 class="login100-form-title p-b-43">SignUp</h1>  
        <form class="login100-form" action="?do=SignUp" method="post" enctype="multipart/form-data">
-         <span class="login100-form-title p-b-43">
-           SignUp
-         </span>
-
 
          <div class="wrap-input100">
            <input class="input100" type="text" name="full_name" value="<?php echo isset($_POST['full_name']) ? $_POST['full_name'] : ''; ?>" required>
@@ -358,7 +355,7 @@
          </div>
 
          <div class="singup-content">
-             <p>I have Email! <span><a href="login.php?do=Signin">Signin</a></span></p>
+             <p>I have Email! <span><a href="login.php?do=Signin">SignIn</a></span></p>
          </div>
 
          <!-- This Is Loop Special To Show Errors [Filter] Field  -->
@@ -374,8 +371,6 @@
          </div>
        </form>
 
-       <div class="login100-more" style="background-image: url('<?php echo $img; ?>bg-01.jpg');">
-       </div>
      </div>
    </div>
  </div>

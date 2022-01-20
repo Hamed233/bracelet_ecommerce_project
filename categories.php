@@ -17,10 +17,6 @@
 
   if ($action == 'Categories') { ?>
 
-  <div class="header-img">
-     <p class="text-center"><?php echo $lang['All Categories']; ?></p>
-  </div>
-
   <div class="container">
     <h1 class="all-cats-head"><?php echo $lang['All Categories']; ?></h1>
     <div class="row">
@@ -47,9 +43,7 @@
 
 
 <?php } elseif ($action == $_GET['action']) {  ?>
-  <div class="header-img">
-     <p class="text-center"><?php echo preg_replace('/\s+|%/', ' ', $_GET['catname']); ?></p>
-  </div>
+     
 
     <input type="hidden" id="catid" value="<?php echo $_GET['catid']; ?>" />
 
@@ -141,6 +135,7 @@
   </div>
 
          <div class="col-md-10">
+          <h1 class="category_name_header"><?php echo preg_replace('/\s+|%/', ' ', $_GET['catname']); ?></h1>
            <div class="filter-content">
             <i class="d-inline fas fa-sort-amount-up"></i>
             <p class="d-inline"> Filter</p>

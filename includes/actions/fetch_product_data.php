@@ -57,16 +57,16 @@ if(isset($_POST["action_product"])){
        <div class="product-img">
          <img src="admin-dashboard/upload/products/' . $product['p_picture'] . '" alt="product image" />
        </div><!-- .product-img -->
-       <div class="product-name">' . $product['p_name'] . '</div>
+       <a class="" href="product.php?productname=' . preg_replace('/\s+|&/', '%', $product['p_name']) . '&p_id=' . $product['p_id'] . '&action=getproductinformation' . '"  target="_blank">
+        <div class="product-name">' . $product['p_name'] . '</div>
 
-       <div class="product-price">' . 'Kwt' . $product['price'] . '</div>
+        <div class="product-price">' . 'Kwt' . $product['price'] . '</div>
 
-       <div class="control-product">
-         <a class="btn btn-brown btn-block" href="product.php?productname=' . preg_replace('/\s+|&/', '%', $product['p_name']) . '&p_id=' . $product['p_id'] . '&action=getproductinformation' . '"  target="_blank">
-           <i class="fas fa-cart-plus"></i>
-           ' . $lang['add to cart'] . '
-         </a>
-       </div><!-- .control-product -->
+        <div class="control-product btn btn-brown btn-block">
+            <i class="fas fa-cart-plus"></i>
+            ' . $lang['add to cart'] . '
+        </div><!-- .control-product -->
+       </a>
        <div class="save-product-num">
          <span>' . $lang['Save products'] . ' ' . $product['available_product_num'] . ' </span>
        </div>
@@ -83,9 +83,6 @@ if(isset($_POST["action_product"])){
     <div class="title">' . $lang['Whoops'] . '!</div>
     <div class="description">
       ' . $lang['We couldn’t find the products you’re looking for'] . '
-    </div>
-    <div class="button-block">
-      <a href="javascript:void(0);" onclick="document.location.reload(true);" class=" btn btn-primary">' . $lang['Clear filters'] . '</a>
     </div>
   </div>
   </div>

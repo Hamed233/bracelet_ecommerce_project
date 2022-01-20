@@ -301,7 +301,7 @@
                </div>
                <div class="col-7">
                  <div class="add-buy-btn for_lg">
-                     <button id="cart_btn" class="btn btn-danger cart_btn" onclick="cart('<?php echo $_GET['p_id']; ?>')" style="width: 100%;">
+                     <button id="cart_btn" class="btn cart_btn" onclick="cart('<?php echo $_GET['p_id']; ?>')">
                        <i class="fas fa-cart-plus"></i>
                        <?php echo $lang['add to cart']; ?>
                      </button>
@@ -425,13 +425,15 @@
                           <div class="product-img">
                             <img src="admin-dashboard/upload/products/<?php echo $product['p_picture']; ?>" alt="product image" />
                           </div><!-- .product-img -->
-                          <div class="product-name">
-                            <?php echo $product['p_name']; ?>
-                          </div><!-- .product-name -->
+                          <a class="" href="product.php?p_id=<?php echo $product['p_id'] . '&productname=' . preg_replace('/\s/', '%', $product['p_name']) . '&action=getproductinformation'; ?>" target="_blank">           
+                            <div class="product-name">
+                              <?php echo $product['p_name']; ?>
+                            </div><!-- .product-name -->
 
-                          <div class="product-price">
-                            <?php echo $product['price'] . 'Kwt'; ?>
-                          </div><!-- .product-price -->
+                            <div class="product-price">
+                              <?php echo $product['price'] . 'Kwt'; ?>
+                            </div><!-- .product-price -->
+                          </a>
 
                           <div class="control-product">
                             <a class="btn btn-brown btn-block" href="product.php?p_id=<?php echo $product['p_id'] . '&productname=' . preg_replace('/\s/', '%', $product['p_name']) . '&action=getproductinformation'; ?>" target="_blank">
